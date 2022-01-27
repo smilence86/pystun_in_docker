@@ -2,24 +2,7 @@
 
 Detect nat type with docker command in linux, support amd64, arm32, arm64
   
-# Dockerfile
-  
-```
-FROM python:2-alpine
-
-RUN apk update && apk upgrade && \
-    apk add --no-cache bash git openssh
-
-WORKDIR /usr/src/app
-
-RUN git clone https://github.com/jtriley/pystun.git
-
-RUN cd pystun && python setup.py install
-
-CMD [ "sh", "-c", "echo '\n\nDetecting, please wait a moment...\n'; pystun" ]
-```
-  
-  # usage
+# usage
 ```
 docker run -it --rm --network=host smilence86/pystun
 ```
