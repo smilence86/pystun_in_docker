@@ -1,6 +1,6 @@
 FROM python:2-alpine
 
-RUN apk update && apk add --no-cache bash git
+RUN apk add --no-cache git
 
 WORKDIR /usr/src/app
 
