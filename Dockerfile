@@ -1,7 +1,6 @@
 FROM python:2-alpine
 
-RUN apk update && apk upgrade && \
-    apk add --no-cache bash git openssh
+RUN apk update && apk add --no-cache bash git
 
 WORKDIR /usr/src/app
 
